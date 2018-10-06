@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org"
+      xmlns:xlmns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Departments</title>
+    <style>
+        .even{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<div th:replase="helper/main-menu.html"></div>
+<table border ="1" width="100%" cellpadding="10" cellspacing="10" style = "...">
+    <tr>
+        <th>№</th>
+        <th>Department Name</th>
+    </tr>
+    <tr th:each = "department, iter : ${departments}" th:class = "${iter.even ? 'even': 'odd}">
+        <td width="50" align="center" nowrap="nowrap" th:utext="${iter.index+1}+ '.'">...</td>
+        <td width="50%" th:utext="${department.departmentName}">...</td>
+        <td width = "50" nowrap="nowrap" align="center">
+            <a th:href = "@{'/department-edit?id = ' + ${department.id}}">EDIT</a>
+        </td>
+        <td width = "50" nowrap="nowrap" align="center">
+            <a th:href = "@{'/department-remove?id = ' + ${department.id}}">REMOVE</a>
+        </td>
+    </tr>
+</table>
+<br/>
+<form method="get" action="/department-create">
+    <button style="..." type="submit">CREATE</button>
+</form>
+</body>
+</html>
