@@ -3,7 +3,7 @@ package ru.bodrov.enterprise.TryForStaff.model;
 
 import java.sql.Date;
 
-public class Staff extends AbstractEnt{
+public class Staff extends AbstractEntity {
 
     private String firstName;
 

@@ -1,13 +1,9 @@
 package ru.bodrov.enterprise.TryForStaff.model;
 
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 import java.util.UUID;
 
-//@MappedSuperclass
-public class AbstractEnt {
-
-    //@Id
+public class AbstractEntity {
+    
     protected String id = UUID.randomUUID().toString();
 
     public String getId(){return id;}

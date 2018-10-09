@@ -1,6 +1,6 @@
 package ru.bodrov.enterprise.TryForStaff.model;
 
-public class Department extends AbstractEnt  {
+public class Department extends AbstractEntity {
 
     private String departmentName;
 
