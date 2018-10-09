@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org"
+      xmlns:xlmns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Test SpEL</title>
+    <style>
+        .even{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<p th:text = "${polls[0].nameType}" th:unless = "${polls[0]==null}" />
+<p th:text = "${polls[1].nameType}" th:unless = "${polls[1]==null}" />
+<p th:text = "${polls[2].nameType}" th:unless = "${polls[2]==null}" />
+</body>
+</html>
